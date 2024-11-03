@@ -20,7 +20,8 @@ nav {
   background-color: rgb(20, 62, 87);
 }
 
-nav a {
+nav a,
+nav button {
   display: inline-block;
   min-width: 9rem;
   padding: 0.5rem;
@@ -28,26 +29,33 @@ nav a {
   border: solid 1px #aaa;
   text-align: center;
   text-decoration: none;
-  color: #eee;
+  color: #555;
+  background-color: white;
+  cursor: pointer;
 }
 
 nav a[aria-current='page'] {
-  color: #eee;
+  color: #000;
+  background-color: #d4d4d4;
 }
 
 main {
   padding: 1rem;
+  text-align: center; /* 置中文本 */
   background-color: rgb(131, 172, 199);
 }
 
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
-  text-align: center;
+  text-align: center; /* 置中标题 */
 }
-#p1 {
-  text-align: center;
+
+.photo-container img {
+  width: 100%; /* 使图片填满容器 */
+  height: 100%; /* 保持容器高度 */
+  object-fit: cover; /* 裁剪图片以适应正方形区域 */
 }
-#p2 {
-  text-align: center;
+#comment {
+  text-align: justify;
 }
