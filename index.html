@@ -1,22 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>My Blog</title>
+    <title>Welcome to ZHNI's Blog！</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #content {
+        display: none;
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin: 20px;
+      }
+      /* 固定按鈕在底部 */
+      #toggleButton {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: rgb(20, 62, 87);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        z-index: 1000;
+      }
+      /* 簡單的頁面內容樣式 */
+      .content-section {
+        padding: 20px;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+    </style>
   </head>
   <body>
+    <button id="toggleButton">顯示隱藏的內容</button>
+    <div id="content">
+      <p id="comment">
+        隱藏內容：這個部分還不確定要放什麼，繳交作業後會再努力研究研究，做出更好更沒有漏洞的網站！
+      </p>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $('#toggleButton').click(function () {
+          $('#content').toggle(300);
+        });
+      });
+    </script>
     <nav>
-      <a href="/" aria-current="page" id="page1">My First Blog</a>
+      <a href="/" aria-current="page">Home</a>
+      <a href="/page2.html">Introduce</a>
     </nav>
     <main>
-      <h1>Welcome To My Blog！</h1>
-      <p id="p1">
-      </p>
+      <h1>Welcome to ZHNI's Blog！</h1>
+      <p>-- 一個分享關於輔仁大學附近美食的小站 --</p>
     </main>
-    
+    <!-- <div class="photo-container">
+      <img src="img/photo1.jpg" alt="Centered Photo" />
+    </div> -->
+    <h3>動機</h3>
+    <p id="comment">
+      因為周遭朋友和我常常因為想午餐要吃什麼而感到困擾，也相信輔仁大學的很多人都為此而苦惱過，尤其是在中午時段，除了要一致認定吃的東西之外，也要找不會排很久的店，這對於我們這些12:40就要趕上課的大學生非常不好，所以就列出幾個我們最近吃過的小店啦！~之後有機會還會繼續更新噢！
+    </p>
+    <h3>小小心得</h3>
+    <p id="comment">
+      對於做出這個網站到後面變得有點力不從心，很努力想嘗試讓我的網站變得很豐富，但還是遇到了許多問題(還有時間不足的部分，是我太晚開始做了)，雖然最後還是做出了一個成果，但是還是有點偏離我一開始的想做的目標網站，原本是想真正做成一個能夠記錄我的大學生活的部落格，但我使用的程式工具&nbsp;StackBlitz&nbsp;沒辦法上傳超過三張圖片(超過的話需要付費)，而且我的照片最後也無法上傳至網站上，上傳後變成只出現一個圖片的標誌圖案，有確認過不是程式碼的問題了，所以之後會再重新試試看！
+    </p>
+    <p id="comment">
+      這次的經驗還是讓我學到了不少，越來越熟悉HTML、CSS的語法，希望之後會越來越上手、使用更多語法讓我的部落格網站更像樣點！
+    </p>
   </body>
 </html>
